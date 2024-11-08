@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Facts</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Title and Tagline */
+        h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        p.tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Quote Display */
+        .quote {
+            font-size: 1.5rem;
+            color: #444;
+            margin: 20px 20px;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        /* Button Styling */
+        .generate-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .generate-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title and Tagline -->
+    <h1>Exam Facts</h1>
+    <p class="tagline">Because sometimes, laughter is the only answer.</p>
+
+    <!-- Quote Display -->
+    <div id="quote" class="quote">Click the button below for a laugh!</div>
+
+    <!-- Button -->
+    <button class="generate-btn" onclick="generateQuote()">Give Me a Laugh!</button>
+
+    <!-- Footer -->
+    <footer>&copy; 2024 Exam Facts. Spread the laughs, not the stress!</footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Array of funny exam quotes
+        const quotes = [
+            "I studied everything... except the answers to the questions on the exam.",
+            "Failed an exam? Don’t worry, failure is just success in progress. A really, really slow progress.",
+            "Why study for finals when I can Google all the answers in real life?",
+            "Passed? Impossible! Failed? Expected.",
+            "I told my brain to focus, and it’s like, 'LOL, good one!'",
+            "Why is my GPA going down faster than my phone’s battery?",
+            "Apparently, studying for exams is a lot like dieting… I end up cheating.",
+            "I love long walks… especially when they’re taken by people who write my exam papers.",
+            "Exams: the only way I feel my heart rate go up without exercising.",
+            "I studied. I learned. I forgot. Repeat.",
+            "My biggest achievement today? Turning a page in my textbook.",
+            "Me during exams: Ok brain, let's do this! Brain: Umm, I'm outta here.",
+            "I thought I was prepared, but my exam said 'plot twist!'",
+            "If you think nobody cares about you, just skip an exam. You’ll see how much they care then.",
+            "After each exam, I feel like a genius for all the wrong answers I managed to come up with.",
+            "Failed my exam again. Even my calculator’s like, 'Bruh, really?'",
+            "Me at the start of the exam: ‘I got this!’ Five minutes in: ‘I don’t got this…’",
+            "Every time I check my exam results, I realize 'we were on a break!'",
+            "The most creative thing I’ve done in life? Answering exam questions I had no idea about.",
+            "I studied once, it was horrible… never doing that again."
+        ];
+
+        // Function to generate a random quote
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote").textContent = randomQuote;
+        }
+    </script>
+
+</body>
+</html>
